@@ -51,7 +51,7 @@ return (
 
             <div className="mb-md-5 mt-md-4 pb-5">
 
-              <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
+              <h2 className="fw-bold mb-2 text-uppercase">Loginn</h2>
               <p className="text-white-50 mb-5">Please enter your login and password!</p>
 <form onSubmit={saveUser}>
               <div className="form-outline form-white mb-4">
