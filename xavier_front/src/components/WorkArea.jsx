@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import { MyContext } from "./MyContext";
+import Page3 from "./Page3";
 
 function WorkArea() {
     console.log("--------------sss-----------------");
@@ -15,6 +16,9 @@ function WorkArea() {
                 break;
             case "page2":
                 return <>{<Page2 />}</>;
+                break;
+                case "page3":
+                return <>{<Page3/>}</>;
                 break;
             default:
                 return <>ERROR</>;

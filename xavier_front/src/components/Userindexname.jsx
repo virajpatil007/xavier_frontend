@@ -8,16 +8,10 @@ function Userindexname({ name, path }) {
     console.log('path ',path)
     const navigate = useNavigate();
     const goto = (val) => { 
-        if (val == "page1") { 
-            asetPath(val);
-            navigate("/userindex/workarea"); 
-            console.log('------page1');
-        } 
-        if (val == "page2") { 
-          asetPath(val);
-          navigate("/userindex/workarea"); 
-          console.log('------page2');
-      } 
+     
+      asetPath(val);
+      navigate("/userindex/workarea"); 
+      console.log('------page1');
     }
   return (
     <div>Userindexname
