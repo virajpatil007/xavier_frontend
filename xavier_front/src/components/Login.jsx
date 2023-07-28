@@ -29,7 +29,7 @@ function Login() {
         result = await result.json();
         console.log(result.username);
         if (result.username !== "password dont match") {
-            localStorage.setItem("user", JSON.stringify(result.username));
+            localStorage.setItem("user", result.username);
             console.log("true");  
             navigate('/userindex')
         } else {
