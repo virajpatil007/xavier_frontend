@@ -1,13 +1,14 @@
 import React from 'react';
 import "../css/SubNavbar.css";
+import { Link } from 'react-router-dom';
 
 function SubNavbar() {
   return (
     <div><ul>
-    <li><a href="#home">Home</a></li>
+    <li><Link to='/'>Home</Link></li>
     <li><a href="#news">News</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#contact">Login</a></li>
+    <li><Link to='/login'>Login</Link></li>
   </ul></div>
   )
 }
