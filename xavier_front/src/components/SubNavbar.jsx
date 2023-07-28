@@ -1,16 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import "../css/SubNavbar.css";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 
 function SubNavbar() {
-  return (
-    <div><ul>
-    <li><Link to='/'>Home</Link></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><Link to='/login'>Login</Link></li>
-  </ul></div>
-  )
+    const [check, setCheck] = useState(false);
+    const type = useLocation();
+    // useEffect(() => {
+    //     if (type.pathname.includes("/userindex") === true) {
+    //         setCheck(true);
+    //     } else {
+    //         setCheck(false);
+    //     }
+    // });
+
+    const logout = () => {
+        console.log("logout");
+        localStorage.clear();
+    };
+
+    return (
+        <div>
+            <ul>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <a href="#news">News</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+                {localStorage.getItem('user') ? (
+                    <>
+                        <li>
+                            <Link to="/login" onClick={logout}>
+                                Log Out
+                            </Link>
+                        </li>
+                    </>
+                ) : (
+                    <li>
+                        <Link to="/login">Login</Link>
+                    </li>
+                )}
+            </ul>
+        </div>
+    );
 }
 
-export default SubNavbar
+export default SubNavbar;

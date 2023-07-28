@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 //try
 function Login() {
     let [user, setuser] = useState([]); 
-  
+    const navigate = useNavigate();
     let initialvalue = {
         email: "",
         password: "",
@@ -30,7 +30,8 @@ function Login() {
         console.log(result.username);
         if (result.username !== "password dont match") {
             localStorage.setItem("user", JSON.stringify(result.username));
-            console.log("true"); 
+            console.log("true");  
+            navigate('/userindex')
         } else {
             console.log("false");
             localStorage.clear();
