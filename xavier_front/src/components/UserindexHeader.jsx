@@ -4,11 +4,13 @@ function UserindexHeader({header}) {
   return (
     <div
     style={{minHeight: 35,
-        background: "#003664",
+        background: "skyblue",
         boxShadow: "none",
-        display: "flex",
-        justifyContent: "center",}}
-    >UserindexHeader : {header}</div>
+        padding:5
+        // display: "flex",
+        // justifyContent: "center",
+      }}
+    > {header}</div>
   )
 }
 

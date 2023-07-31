@@ -14,7 +14,7 @@ function Userindexname({ name, path }) {
       console.log('------page1');
     }
   return (
-    <div>Userindexname
+    <div style={{padding:5}}>
         <button  onClick={(e) => goto(path)}>{name}</button>
     </div>
   )

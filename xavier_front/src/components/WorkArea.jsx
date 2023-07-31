@@ -26,7 +26,7 @@ function WorkArea() {
     };
 
     return (
-        <div>
+        <div style={{background:'red',width:'83%',float:'right'}}>
             WorkArea
             {switchCheck()}
         </div>

@@ -25,6 +25,19 @@ function Userindex() {
                         <Userindexname name="Page 1" path="page1" />
                         <Userindexname name="Create term" path="page2" />
                         <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="page3" path="page3" />
                     </>
                     
                 );
@@ -36,8 +49,8 @@ function Userindex() {
             <Outlet />
             <div
                 style={{
-                    marginTop: "9.8%",
-                    width: 255,
+                    marginTop: "0.1%",
+                    width: '17%',
                     background: "white",
                     borderRight: "none",
                     height: "90%",
