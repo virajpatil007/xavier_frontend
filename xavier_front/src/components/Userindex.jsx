@@ -25,7 +25,7 @@ function Userindex() {
                         <Userindexname name="Page 1" path="page1" />
                         <Userindexname name="Create term" path="page2" />
                         <Userindexname name="page3" path="page3" />
-                        <Userindexname name="page3" path="page3" />
+                       
                     </>
                 );
                 break;
@@ -36,7 +36,7 @@ function Userindex() {
                         <Userindexname name="Page 1" path="page1" />
                         <Userindexname name="Create term" path="page2" />
                         <Userindexname name="page3" path="page3" />
-                        <Userindexname name="page3" path="page3" />
+                      
                     </>
                 );
                 break;

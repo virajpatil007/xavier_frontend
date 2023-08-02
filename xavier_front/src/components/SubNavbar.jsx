@@ -22,7 +22,7 @@ function SubNavbar() {
         <div>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">Home</Link> 
                 </li>
                 <li>
                     <a href="#news">News</a>
@@ -32,11 +32,20 @@ function SubNavbar() {
                 </li>
                 {localStorage.getItem("user") ? (
                     <>
-                        <li>
-                            <Link to="/login" onClick={logout}>
-                                Log Out
+                        
+                        {/* <li> */}
+                        <Link to="/login" style={{color:'white',textAlign:'center',marginTop:2,float:'right',marginRight:20,textDecoration:'none'}} onClick={logout}>
+                                Log out
                             </Link>
-                        </li>
+                            <p style={{color:'white',textAlign:'center',marginTop:2,float:'right',marginRight:20}}>
+                                {localStorage.getItem("user")}
+                            </p>
+                            {/* <li> */}
+                            
+                        {/* </li>    */}
+                        {/* </li> */}
+                     
+
                     </>
                 ) : (
                     <li>
