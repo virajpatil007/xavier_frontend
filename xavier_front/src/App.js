@@ -1,4 +1,4 @@
-import {  Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
@@ -12,25 +12,25 @@ import { MyContext } from "./components/MyContext";
 import Protected from "./components/Protected";
 
 function App() {
-    
-    const [apath,asetPath] = useState('')
-
-
+    const [apath, asetPath] = useState("");
 
     return (
-        <MyContext.Provider value={{apath,asetPath}}>
-        <div className="App">
-            <Navbar />
-            <SubNavbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/userindex" element={<Protected Component={Userindex} />}>
-                    <Route path="workarea" element={<WorkArea />} />
-                </Route>
-                <Route path="/*" element={<Home />} />
-            </Routes>
-        </div>
+        <MyContext.Provider value={{ apath, asetPath }}>
+            <div className="App">
+                <Navbar />
+                <SubNavbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route
+                        path="/userindex"
+                        element={<Protected Component={Userindex} />}
+                    >
+                        <Route path="workarea" element={<WorkArea />} />
+                    </Route>
+                    <Route path="/*" element={<Home />} />
+                </Routes>
+            </div>
         </MyContext.Provider>
     );
 }

@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../css/SubNavbar.css";
 import { Link, useLocation } from "react-router-dom";
 
-
-
-
 function SubNavbar() {
-    const[logs,setlogs]=useState("")
+    const [logs, setlogs] = useState("");
     const [check, setCheck] = useState(false);
     const type = useLocation();
     // useEffect(() => {
@@ -18,8 +15,7 @@ function SubNavbar() {
     // });
 
     const logout = () => {
-        setlogs(localStorage.clear())
-      
+        setlogs(localStorage.clear());
     };
 
     return (
@@ -34,7 +30,7 @@ function SubNavbar() {
                 <li>
                     <a href="#contact">Contact</a>
                 </li>
-                {localStorage.getItem('user') ? (
+                {localStorage.getItem("user") ? (
                     <>
                         <li>
                             <Link to="/login" onClick={logout}>

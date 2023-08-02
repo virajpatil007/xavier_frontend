@@ -6,7 +6,7 @@ import Page3 from "./Page3";
 
 function WorkArea() {
     console.log("--------------sss-----------------");
-    const {apath} = useContext(MyContext);
+    const { apath } = useContext(MyContext);
 
     const switchCheck = () => {
         console.log("IN SWITCH");
@@ -17,8 +17,8 @@ function WorkArea() {
             case "page2":
                 return <>{<Page2 />}</>;
                 break;
-                case "page3":
-                return <>{<Page3/>}</>;
+            case "page3":
+                return <>{<Page3 />}</>;
                 break;
             default:
                 return <>ERROR</>;
@@ -26,7 +26,7 @@ function WorkArea() {
     };
 
     return (
-        <div style={{background:'red',width:'83%',float:'right'}}>
+        <div style={{ background: "red", width: "83%", float: "right" }}>
             WorkArea
             {switchCheck()}
         </div>
