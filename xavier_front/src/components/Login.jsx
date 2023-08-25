@@ -30,7 +30,7 @@ function Login() {
         console.log(result.username);
         if (result.username !== "password dont match") {
             localStorage.setItem("user", result.username);
-            console.log("true");
+            console.log("true l" ,result.username );
             navigate("/userindex");
         } else {
             console.log("false");

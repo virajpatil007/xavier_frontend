@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import UserindexHeader from "./UserindexHeader";
 import Userindexname from "./Userindexname";
+import { MyContext } from "./MyContext";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 function Userindex() {
     const navigate = useNavigate();
+    const { toggle } = useContext(MyContext);
     const fun = () => {
         console.log("navigate...");
         navigate("/userindex/workarea");
@@ -14,6 +17,7 @@ function Userindex() {
     useEffect(() => {
         setLog(localStorage.getItem("user"));
         console.log("log ", log);
+        console.log("TOGGLE ", toggle);
     });
 
     const check = () => {
@@ -25,7 +29,21 @@ function Userindex() {
                         <Userindexname name="Page 1" path="page1" />
                         <Userindexname name="Create term" path="page2" />
                         <Userindexname name="page3" path="page3" />
-                       
+                        <Userindexname name="Page 1" path="page1" />
+                        <Userindexname name="Create term" path="page2" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="Page 1" path="page1" />
+                        <Userindexname name="Create term" path="page2" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="Page 1" path="page1" />
+                        <Userindexname name="Create term" path="page2" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="Page 1" path="page1" />
+                        <Userindexname name="Create term" path="page2" />
+                        <Userindexname name="page3" path="page3" />
+                        <Userindexname name="Page 1" path="page1" />
+                        <Userindexname name="Create term" path="page2" />
+                        <Userindexname name="page3" path="page3" />
                     </>
                 );
                 break;
@@ -36,7 +54,6 @@ function Userindex() {
                         <Userindexname name="Page 1" path="page1" />
                         <Userindexname name="Create term" path="page2" />
                         <Userindexname name="page3" path="page3" />
-                      
                     </>
                 );
                 break;
@@ -45,20 +62,24 @@ function Userindex() {
     return (
         <>
             <Outlet />
-            <div
-                style={{
-                    marginTop: "0.1%",
-                    width: "17%",
-                    background: "white",
-                    borderRight: "none",
-                    height: "90%",
-                    maxHeight: "100%",
-                    backgroundColor: "blue",
-                }}
+
+            <Offcanvas
+                show={toggle}
+                scroll={true}
+                backdrop={false}
+                style={{ marginTop: 150,
+                width: "17%",
+                background: "white",
+                borderRight: "none",
+                height: 607,
+                maxHeight: "100%",
+                backgroundColor: "blue", }}
             >
-                <h1>USERINDEX</h1>
-                {check()}
-            </div>
+                <Offcanvas.Header>
+                    <Offcanvas.Title>USERINDEX</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>{check()}</Offcanvas.Body>
+            </Offcanvas>
         </>
     );
 }

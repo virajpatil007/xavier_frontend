@@ -13,10 +13,10 @@ import Protected from "./components/Protected";
 
 function App() {
     const [apath, asetPath] = useState("");
+    const [toggle, setToggle] = useState(true);
 
     return (
-        <MyContext.Provider value={{ apath, asetPath }}>
-            <div className="App">
+        <MyContext.Provider value={{ apath, asetPath,toggle,setToggle }}>
                 <Navbar />
                 <SubNavbar />
                 <Routes>
@@ -30,7 +30,7 @@ function App() {
                     </Route>
                     <Route path="/*" element={<Home />} />
                 </Routes>
-            </div>
+           
         </MyContext.Provider>
     );
 }
